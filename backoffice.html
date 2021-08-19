@@ -57,11 +57,49 @@
 
     <title>Amazon 2</title>
     <script src="backoffice.js"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
+
+      body {
+        background-color: rgb(247, 247, 255);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+      }
+      .card-img-top {
+        width: 40%;
+      }
+      .card {
+        border-radius: 0.3rem;
+        box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%),
+          0 2px 6px 0 rgb(206 206 238 / 54%);
+      }
+
+      .navbar {
+        background-color: #222e3c;
+        box-shadow: 0 0 2rem 0 rgba(33, 37, 41, 0.1);
+        font-family: "Montserrat", sans-serif !important;
+      }
+      .navbar-brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      #navbarNav > ul > li > a {
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: rgb(224, 224, 224);
+      }
+      .headertext{
+        font-weight: 700;
+      }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/index.html">Amazon 2</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/index.html"
+      ><span class="iconify mr-2" data-icon="ls:amazon"></span>Amazon 2</a
+    >
       <button
         class="navbar-toggler"
         type="button"
@@ -86,8 +124,8 @@
         </ul>
       </div>
     </nav>
-    <h1 class="text-center mb-3 mt-3">Back Office</h1>
-    <h2 class="text-center mb-3">Create a product:</h2>
+    <h1 class="text-center mb-3 mt-3 headertext">Back Office</h1>
+    <h2 id="editHeading" class="text-center mb-3 headertext">Create a product:</h2>
     <div class="container">
       <form>
         <div class="form-group">
@@ -135,7 +173,7 @@
           type="button"
           style="position: absolute; left: 46%"
           class="btn btn-primary"
-          onclick="createProduct()"
+          id="createBtn"
         >
           Create Product
         </button>
@@ -144,9 +182,11 @@
         type="button"
         style="position: absolute; right: 21%"
         class="btn btn-danger"
-        onclick="clearProducts()"
+        id="deleteBtn"
       >
-        Clear all products
+      
+      <!-- <span class="iconify" data-icon="bi:trash-fill"></span> -->
+      Clear all products
       </button>
       <div style="margin-top: 70px" id="alertContainer">
         <div style="display:none;" id="showalert" class="alert"></div>

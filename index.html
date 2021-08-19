@@ -68,16 +68,48 @@
 
     <title>Amazon 2</title>
     <script src="index.js"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap");
+
+      body {
+        background-color: rgb(247, 247, 255);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+      }
       .card-img-top {
-        width: 60%;
+        width: 40%;
+      }
+      .card {
+        border-radius: 0.3rem;
+        box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%),
+          0 2px 6px 0 rgb(206 206 238 / 54%);
+      }
+
+      .navbar {
+        background-color: #222e3c;
+        box-shadow: 0 0 2rem 0 rgba(33, 37, 41, 0.1);
+        font-family: "Montserrat", sans-serif !important;
+      }
+      .navbar-brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      #navbarNav > ul > li > a {
+        font-size: 0.98rem;
+        font-weight: 600;
+      }
+      .headertext {
+        font-weight: 700;
       }
     </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Amazon 2</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#"
+        ><span class="iconify mr-2" data-icon="ls:amazon"></span>Amazon 2</a
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -102,23 +134,11 @@
         </ul>
       </div>
     </nav>
-    <h1 class="text-center mt-3 mb-3">Amazon 2</h1>
+    <h1 class="text-center mt-3 mb-3 headertext">Amazon 2</h1>
 
     <div class="container">
       <div class="row row-cols-1 row-cols-md-1" id="cardList">
-        <div class="col mb-4">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
+        <h3 class="text-center mt-5">No products to show!</h3>
       </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->

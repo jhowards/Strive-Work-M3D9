@@ -1,7 +1,10 @@
 window.onload = async () => {
   const results = await grabAPI();
   console.log(results);
-  generateCards(results);
+
+  if (results.length !== 0) {
+    generateCards(results);
+  }
 };
 
 const grabAPI = async () => {
@@ -34,21 +37,26 @@ const generateCards = (results) => {
             <div class="col mb-4">
             <div class="card mb-3">
           <div class="row no-gutters">
-            <div class="col-md-4 d-flex">
+            <div class="col-md-4 d-flex py-2">
               <img src="${results.imageUrl}" class="card-img-top mx-auto" alt="...">
             </div>
             <div class="col-md-8">
             <div class="card-body">
-            <h5 class="card-title">${results.brand}</h5>
+            <h5 class="card-title">${results.name}</h5>
             <b class="card-text">
             £${results.price}
             </b>
-            <p class="card-text">
+            <p class="card-text mb-5">
             ${results.description}
             </p>
+            <div style="position: absolute; bottom: 5px;">
+            <a type="button" class="btn btn-primary" href="/backoffice.html?${results._id}">Edit Product</a>
             <p class="card-text">
-              <small class="text-muted">${results.userId}</small>
+              <small class="text-muted">
+              ${results._id}</small>
             </p>
+            </div>
+            
           </div>
             </div>
           </div>
