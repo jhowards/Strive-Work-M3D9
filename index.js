@@ -35,7 +35,7 @@ const generateCards = (results) => {
       return `
 
             <div class="col mb-4">
-            <div class="card mb-3">
+            <div class="card mb-2">
           <div class="row no-gutters">
             <div class="col-md-4 d-flex py-2">
               <img src="${results.imageUrl}" class="card-img-top mx-auto" alt="...">
@@ -46,7 +46,7 @@ const generateCards = (results) => {
             <b class="card-text">
             £${results.price}
             </b>
-            <p class="card-text mb-5">
+            <p class="card-text mb-5 pb-2">
             ${results.description}
             </p>
             <div style="position: absolute; bottom: 5px;">
