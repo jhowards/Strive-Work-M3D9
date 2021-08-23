@@ -5,7 +5,7 @@ window.onload = async () => {
 
   if (urlID) {
     let heading = document.getElementById("editHeading");
-    heading.innerText = "Edit a product:";
+    heading.innerText = "Edit Movies:";
 
     let deleteBtn = document.getElementById("deleteBtn");
     deleteBtn.onclick = function () {
